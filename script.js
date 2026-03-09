@@ -3,10 +3,9 @@
 // color 支持： #hex、rgb()、hsl()、颜色英文名 等
 const specialDates = [
     { date: "2025-03-24", color: "#f472b6", label: "测试1" },
-    { date: "2025-05-24", color: "#60a5fa", label: "测试2" },
-    { date: "2026-03-24", color: "#34d399", label: "测试3" },
-    { date: "2026-05-24", color: "#fbbf24", label: "测试4" },
-    { date: "2026-05-25", color: "#c084fc", label: "测试5" },
+    { date: "2026-03-24", color: "#34d399", label: "允许高潮" },
+    { date: "2026-05-24", color: "#34d399", label: "允许高潮" },
+    { date: "2026-05-25", color: "#fbbf24", label: "测试5" },
     
     // 你可以继续添加，例如：
     // { date: "2026-08-15", color: "#ef4444", label: "暑假特别日" },
