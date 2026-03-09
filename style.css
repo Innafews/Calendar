@@ -174,31 +174,100 @@ footer {
     }
 }
 
-/* style.css 末尾新增 */
+/* …… 前面的样式全部保持不变 …… */
+
+/* style.css 末尾 - 优化后的 tooltip（移动端防裁切加强版） */
 .day.special {
     position: relative;
+    cursor: default;           /* 避免出现光标变化干扰 */
 }
 
+/* tooltip 主体 */
+.day.special::after {
+    content: attr(data-label);
+    position: absolute;
+    
+    /* 定位基准改成 bottom + 自动左右 */
+    bottom: 130%;              /* 比 120% 再高一点，避免贴太近 */
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);   /* 默认居中 + 初始轻微上移 */
+    transform-origin: center bottom;               /* 缩放/出现动画以底部为中心 */
+    
+    background: rgba(0,0,0,0.92);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    line-height: 1.4;
+    white-space: nowrap;           /* 默认不换行，追求紧凑 */
+    pointer-events: none;
+    opacity: 0;
+    transition: 
+        opacity 0.22s ease,
+        transform 0.22s ease;
+    z-index: 30;
+    
+    /* 防裁切关键 */
+    max-width: 84vw;               /* 比屏幕宽留出安全边距 */
+    box-sizing: border-box;
+    
+    box-shadow: 0 5px 14px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* 显示时上移 + 居中 */
+.day.special:hover::after,
+.day.special:active::after,
+.day.special:focus::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-8px);  /* 上移距离加大一点，更清晰 */
+}
+
+/* ────────────── 移动端小屏优化 ────────────── */
+@media (max-width: 600px) {
+
     .day.special::after {
-        content: attr(data-label); /* 使用 data-* 属性 */
-        position: absolute;
-        bottom: 110%; /* 显示在日期上方 */
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0,0,0,0.85);
-        color: white;
-        padding: 6px 10px;
-        border-radius: 6px;
         font-size: 0.82rem;
-        white-space: nowrap;
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity 0.2s, transform 0.2s;
-        z-index: 10;
+        padding: 7px 11px;
+        max-width: 78vw;
+        white-space: normal;           /* ← 允许自动换行，非常重要！ */
+        text-align: center;
+        min-width: 120px;              /* 避免太短看起来奇怪 */
+        word-break: break-word;        /* 中文/长英文强制断词 */
     }
 
-    .day.special:hover::after,
-    .day.special:active::after { /* 手机点击/长按也能触发 */
-        opacity: 1;
-        transform: translateX(-50%) translateY(-4px);
+    /* 当格子在最左边时，tooltip 偏右对齐 */
+    .days > .day.special:nth-child(7n+1)::after,   /* 周日 */
+    .days > .day.special:nth-child(7n+2)::after {  /* 周一 */
+        left: 30%;                             /* 向右偏一点 */
+        transform: translateX(-20%) translateY(-8px);
+        transform-origin: left bottom;
     }
+
+    /* 当格子在最右边时，tooltip 偏左对齐 */
+    .days > .day.special:nth-child(7n)::after,     /* 周六 */
+    .days > .day.special:nth-child(7n-1)::after {  /* 周五 */
+        left: 70%;
+        transform: translateX(-80%) translateY(-8px);
+        transform-origin: right bottom;
+    }
+
+    /* 中间位置保持居中 */
+    .days > .day.special:nth-child(7n+3)::after,
+    .days > .day.special:nth-child(7n+4)::after,
+    .days > .day.special:nth-child(7n+5)::after {
+        left: 50%;
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+/* 超小屏（例如 iPhone SE / 小安卓）再收紧 */
+@media (max-width: 380px) {
+    .day.special::after {
+        font-size: 0.78rem;
+        padding: 6px 10px;
+        max-width: 72vw;
+    }
+}
+
+/* …… 其他原有样式继续保持 …… */
