@@ -6,6 +6,7 @@ const specialDates = [
     { date: "2026-05-24", color: "#34d399", label: "允许高潮" },
     { date: "2026-12-24", color: "#34d399", label: "允许高潮" },
     { date: "2027-05-24", color: "#34d399", label: "允许高潮" },
+    { date: "2027-08-24", color: "#34d399", label: "允许高潮" },
     { date: "2027-11-24", color: "#34d399", label: "允许高潮" },
     { date: "2028-06-24", color: "#34d399", label: "允许高潮" },
     { date: "2029-02-24", color: "#34d399", label: "允许高潮" },
