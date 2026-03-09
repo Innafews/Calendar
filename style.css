@@ -1,0 +1,175 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #f9fafb 0%, #e2e8f0 100%);
+    color: #1f2937;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 2.5rem 1.2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2.8rem;
+}
+
+.year-selector {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 0.6rem;
+}
+
+    .year-selector button {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #6b7280;
+        cursor: pointer;
+        padding: 0 0.8rem;
+        transition: color 0.2s;
+    }
+
+        .year-selector button:hover {
+            color: #374151;
+        }
+
+h1 {
+    font-size: 4.8rem;
+    font-weight: 200;
+    letter-spacing: -0.06em;
+    color: #374151;
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 1.18rem;
+    color: #6b7280;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.8rem 1.4rem;
+}
+
+.month {
+    background: rgba(255,255,255,0.92);
+    border-radius: 14px;
+    padding: 1.3rem 1.1rem 1.6rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    border: 1px solid rgba(255,255,255,0.6);
+    transition: all 0.2s ease;
+}
+
+    .month:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 32px rgba(0,0,0,0.1);
+    }
+
+.month-title {
+    text-align: center;
+    font-size: 1.32rem;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+    color: #374151;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.weekday {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.94rem;
+    border-radius: 9px;
+    color: #4b5563;
+    transition: all 0.16s ease;
+}
+
+    .day.empty {
+        background: transparent;
+        color: transparent;
+    }
+
+    .day.today {
+        background: #60a5fa;
+        color: white;
+        font-weight: 600;
+        box-shadow: 0 3px 10px rgba(96,165,250,0.4);
+    }
+
+    /* .day.special 的背景色和阴影已移到 JS 动态设置，不再在这里硬编码 */
+    .day.special:hover {
+        transform: scale(1.08);
+        filter: brightness(1.15);
+    }
+
+footer {
+    margin-top: auto;
+    padding-top: 3.5rem;
+    text-align: center;
+    color: #6b7280;
+    font-size: 0.92rem;
+}
+
+    footer p {
+        margin: 0.35rem 0;
+    }
+
+    footer .small {
+        margin-top: 1rem;
+        font-size: 0.8rem;
+        opacity: 0.75;
+    }
+
+    footer .hint {
+        margin-top: 1.8rem;
+        font-size: 0.86rem;
+        color: #9ca3af;
+    }
+
+/* 响应式 */
+@media (max-width: 900px) {
+    #calendar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    #calendar {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+}
