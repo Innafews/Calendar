@@ -94,7 +94,7 @@ function renderMonth(year, monthIndex) {
             dayDiv.style.fontWeight = "600";
             dayDiv.style.boxShadow = `0 3px 10px ${info.color}88`; // 半透明阴影
             if (info.label) {
-                dayDiv.title = info.label;
+                dayDiv.dataset.label = info.label;   // 使用 data-label
             }
         }
 

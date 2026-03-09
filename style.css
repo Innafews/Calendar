@@ -173,3 +173,32 @@ footer {
         font-size: 4rem;
     }
 }
+
+/* style.css 末尾新增 */
+.day.special {
+    position: relative;
+}
+
+    .day.special::after {
+        content: attr(data-label); /* 使用 data-* 属性 */
+        position: absolute;
+        bottom: 110%; /* 显示在日期上方 */
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.85);
+        color: white;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 0.82rem;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s, transform 0.2s;
+        z-index: 10;
+    }
+
+    .day.special:hover::after,
+    .day.special:active::after { /* 手机点击/长按也能触发 */
+        opacity: 1;
+        transform: translateX(-50%) translateY(-4px);
+    }
