@@ -2,11 +2,19 @@
 // 格式： { date: "YYYY-MM-DD", color: "#颜色值", label: "可选提示文字" }
 // color 支持： #hex、rgb()、hsl()、颜色英文名 等
 const specialDates = [
-    { date: "2025-03-24", color: "#f472b6", label: "测试1" },
     { date: "2026-03-24", color: "#34d399", label: "允许高潮" },
     { date: "2026-05-24", color: "#34d399", label: "允许高潮" },
-    { date: "2026-05-25", color: "#fbbf24", label: "测试5" },
-    
+    // { date: "2026-05-25", color: "#fbbf24", label: "允许自慰" },
+    { date: "2026-08-24", color: "#34d399", label: "允许高潮" },
+    { date: "2026-12-24", color: "#34d399", label: "允许高潮" },
+    { date: "2027-05-24", color: "#34d399", label: "允许高潮" },
+    { date: "2027-11-24", color: "#34d399", label: "允许高潮" },
+    { date: "2028-06-24", color: "#34d399", label: "允许高潮" },
+    { date: "2029-02-24", color: "#34d399", label: "允许高潮" },
+    { date: "2029-11-24", color: "#34d399", label: "允许高潮" },
+    { date: "2029-10-24", color: "#34d399", label: "允许高潮" },
+    { date: "2030-09-24", color: "#34d399", label: "允许高潮" },
+    { date: "2031-08-24", color: "#34d399", label: "允许高潮" },
     // 你可以继续添加，例如：
     // { date: "2026-08-15", color: "#ef4444", label: "暑假特别日" },
     // { date: "2027-01-01", color: "#8b5cf6", label: "新年快乐" },
