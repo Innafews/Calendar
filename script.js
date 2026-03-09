@@ -4,8 +4,6 @@
 const specialDates = [
     { date: "2026-03-24", color: "#34d399", label: "允许高潮" },
     { date: "2026-05-24", color: "#34d399", label: "允许高潮" },
-    // { date: "2026-05-25", color: "#fbbf24", label: "允许自慰" },
-    { date: "2026-08-24", color: "#34d399", label: "允许高潮" },
     { date: "2026-12-24", color: "#34d399", label: "允许高潮" },
     { date: "2027-05-24", color: "#34d399", label: "允许高潮" },
     { date: "2027-11-24", color: "#34d399", label: "允许高潮" },
@@ -15,6 +13,70 @@ const specialDates = [
     { date: "2029-10-24", color: "#34d399", label: "允许高潮" },
     { date: "2030-09-24", color: "#34d399", label: "允许高潮" },
     { date: "2031-08-24", color: "#34d399", label: "允许高潮" },
+
+    { date: "2026-03-31", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-04-08", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-04-17", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2026-06-03", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-06-14", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-06-26", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-07-09", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-07-23", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-08-07", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2026-09-09", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-09-26", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-10-14", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-11-02", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-11-22", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2026-12-13", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2027-01-15", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-02-07", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-03-03", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-03-28", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-04-23", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-05-20", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2027-06-21", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-07-20", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-08-19", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-09-19", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2027-10-21", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2027-12-27", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-01-30", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-03-05", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-04-10", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-05-17", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2028-08-01", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-09-09", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-10-19", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2028-11-29", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2029-01-10", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2029-04-08", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2029-05-22", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2029-07-06", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2029-08-21", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2029-10-07", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2030-01-11", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2030-03-01", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2030-04-20", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2030-06-10", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2030-08-01", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2030-11-16", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2031-01-09", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2031-03-05", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2031-04-30", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2031-06-26", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+
+    { date: "2031-10-21", color: "#fbbf24", label: "允许自慰（严禁高潮）" },
+    { date: "2031-12-19", color: "#fbbf24", label: "允许自慰（严禁高潮）" }
     // 你可以继续添加，例如：
     // { date: "2026-08-15", color: "#ef4444", label: "暑假特别日" },
     // { date: "2027-01-01", color: "#8b5cf6", label: "新年快乐" },
